@@ -3,4 +3,7 @@
 
 def canUnlockAll(boxes):
     unlocked = [0]
+    for i, box in enumerate(boxes):
+        if not box:
+            continue
         
