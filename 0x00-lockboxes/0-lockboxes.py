@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""0x00. Lockboxes"""
+
 class Solution:
     def solve(self, rooms):
     n = len(rooms)
