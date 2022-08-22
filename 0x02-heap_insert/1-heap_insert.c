@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - measures the height of a binary tree
- * @tree: pointer to the root node of the tree to measure the height.
+ * binary_tree_height - Write a function that inserts
+ * @tree: pointer.
  * Return: Height of tree, or 0 if tree is NULL
  */
 
@@ -21,9 +21,9 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 /**
  * hp_is_perfect - aux function for perfect binary tree
- * @tree: Pointer to node
- * @lvl: Node lvl
- * @height: Height from tree node
+ * @tree: Pointer
+ * @lvl: node
+ * @height: node
  * Return: 1 if tree is perfect, 0 otherwise
 */
 
@@ -36,15 +36,15 @@ int hp_is_perfect(const binary_tree_t *tree, int height, int lvl)
 	if (!(tree->left) || !(tree->right))
 		return (0);
 	return (hp_is_perfect(tree->left, height, lvl + 1) *
-		   hp_is_perfect(tree->right, height, lvl + 1));
+		hp_is_perfect(tree->right, height, lvl + 1));
 }
 
 
 /**
  * hp_tree_post - goes through a binary tree by post-order traversal
- * @tree: pointer to the root node of the tree to traverse
+ * @tree: pointer
  * @node: node to exec function
- * @func: pointer to a function to call for each node.
+ * @func: pointer to a function.
  */
 
 void hp_tree_post(heap_t *tree, heap_t *node, void (*func)(heap_t *, heap_t *))
@@ -57,7 +57,7 @@ void hp_tree_post(heap_t *tree, heap_t *node, void (*func)(heap_t *, heap_t *))
 	if (!tree->left || !tree->right)
 		func(tree, node);
 	else if ((left_perfect && !right_perfect) ||
-			 (left_perfect && right_perfect && (right_height < left_height)))
+			(left_perfect && right_perfect && (right_height < left_height)))
 		hp_tree_post(tree->right, node, func);
 	else
 		hp_tree_post(tree->left, node, func);
@@ -65,8 +65,8 @@ void hp_tree_post(heap_t *tree, heap_t *node, void (*func)(heap_t *, heap_t *))
 
 /**
  * swap_if_higher - swaps child and parent nodes if child is higher than parent
- * @node: pointer to node to evaluate
- * @root: double pointer to root of heap
+ * @node: pointer
+ * @root: double pointer
  */
 
 void swap_if_higher(heap_t *node, heap_t **root)
@@ -115,9 +115,9 @@ void swap_if_higher(heap_t *node, heap_t **root)
 
 /**
  * heap_insert_aux - inserts a value into a Max Binary Heap, as left as posible
- * @tree: pointer to tree node to insert node into
- * @node: pointer to the node to insert
- * Return: pointer to the inserted node, or NULL on failure
+ * @tree: pointer
+ * @node: pointer
+ * Return: pointer , or NULL on failure
  */
 
 void heap_insert_aux(heap_t *tree, heap_t *node)
@@ -131,9 +131,9 @@ void heap_insert_aux(heap_t *tree, heap_t *node)
 
 /**
  * heap_insert - nserts a value into a Max Binary Heap
- * @root: double pointer to the root node of the Heap
- * @value: is the value to store in the new node
- * Return: pointer to the created node, or NULL on failure or if parent is NULL
+ * @root: double pointer
+ * @value: new node
+ * Return: pointer , or NULL on failure or if parent is NULL
  */
 
 heap_t *heap_insert(heap_t **root, int value)
