@@ -1,0 +1,6 @@
+#include <studlib.h>
+#include <stdio.h>
+#include "list.h"
+
+/**
+ * check_cycle - check list
