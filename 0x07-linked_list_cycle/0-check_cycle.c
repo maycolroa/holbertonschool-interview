@@ -1,15 +1,15 @@
-#include <studlib.h>
+#include <stdlib.h>
 #include <stdio.h>
-#include "list.h"
+#include "lists.h"
 
 /**
  * check_cycle - check list
  * @list: pointer list
  * return: 0, 1
  */
-int check _cycle(listin_t *list)
+int check_cycle(listint_t *list)
 {
-	listin_t *l = list, *t = list;
+	listint_t *l = list, *t = list;
 	if (t == NULL)
 		return (0);
 	if (t->next == NULL)
