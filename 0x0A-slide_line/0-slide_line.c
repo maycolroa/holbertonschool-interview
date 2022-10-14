@@ -2,8 +2,8 @@
 
 /**
  * slide_right - slide the array of ints to right
- * @line: integer array pointer
- * @size: quantity of elements in array
+ * @line: integer
+ * @size: quantity
  * Return: None
  */
 void slide_right(int *line, size_t size)
@@ -26,8 +26,8 @@ void slide_right(int *line, size_t size)
 /**
  * slide_left - slide the array of ints to left
  *
- * @line: integer array pointer
- * @size: quantity of elements in array
+ * @line: integer array
+ * @size: quantity of elements
  *
  * Return: None
  */
@@ -50,12 +50,10 @@ void slide_left(int *line, size_t size)
 
 /**
  * slide_line - move on a single horizontal line like 2048 game
- *
- * @line: integer array pointer
- * @size: quantity of elements in array
- * @direction: the direction of the merge left or right
- *
- * Return: 1 when sucess, otherwhise 0
+ * @line: integer
+ * @size: quantity of elements
+ * @direction: the direction
+ * Return: 1,0
  */
 int slide_line(int *line, size_t size, int direction)
 {
