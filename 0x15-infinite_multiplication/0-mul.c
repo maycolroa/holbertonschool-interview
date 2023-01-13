@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _print - moves a string 
+ * _print - moves a string
  * @str: string
  * @l: size
  * Return: none
